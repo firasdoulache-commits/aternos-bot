@@ -8,7 +8,7 @@ http.createServer((req, res) => {
 
 function createBot() {
   const bot = mineflayer.createBot({
-    host: 'firasdo.aternos.me',
+    host: 'dab.aternos.host',
     port: 32401,
     username: 'KeepAliveBot',
     version: '1.21.6',

@@ -1,4 +1,10 @@
 const mineflayer = require('mineflayer')
+const http = require('http')
+
+// سيرفر وهمي عشان Render ما يوقف البوت
+http.createServer((req, res) => {
+  res.end('Bot is running!')
+}).listen(3000)
 
 function createBot() {
   const bot = mineflayer.createBot({
@@ -17,8 +23,8 @@ function createBot() {
     }, 60000)
   })
 
-  bot.on('kicked', (reason) => {
-    console.log('❌ طُرد:', reason)
+  bot.on('kicked', () => {
+    console.log('❌ طُرد! إعادة اتصال...')
     setTimeout(createBot, 30000)
   })
 

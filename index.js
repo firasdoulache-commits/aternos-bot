@@ -11,7 +11,7 @@ function createBot() {
     host: 'firasdo.aternos.me',
     port: 32401,
     username: 'KeepAliveBot',
-    version: '1.21.4',
+    version: '1.21.6',
     auth: 'offline'
   })
 
